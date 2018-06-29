@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>买买买-凑单品</title>
+  <link rel="stylesheet" href="fa/css/font-awesome.css">
+  <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+
+<body class="bd_bgc">
+  <div class="mmm_header">
+    <a href="javascript:history.go(-1)"> &lt; </a>
+    <span style="text-align: center; color: #fff;">凑单品</span>
+    <a href="javascript:;" class="header_app">
+      <img src="images/header_app.png" alt="">
+    </a>
+  </div>
+  <!-- 公共部分 -->
+  <div class="gspronav">
+    <div class="left-nav">
+      <a href="#">
+        <span class="text-info1">京东 </span><span>▲</span>
+        <div class="sublist jd">
+          <!-- 挖个坑 -->
+        </div>
+      </a>
+      <a href="#">
+        <span class="text-info2">华北 </span><span>▲</span>
+        <div class="sublist hb">
+          <!-- 挖个坑 -->
+        </div>
+      </a>
+      <a href="#">
+        <span>全部价格</span> <span>▲</span>
+        <div class="sublist">
+          <p>全部价格
+            <span class="fr" style="color: red;">✔</span>
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="right-search fa fa-search"></div>
+  </div>
+
+  <div class="gspcontent clearfix">
+   
+   
+   <!-- 挖个坑 -->
+
+
+
+  </div>
+
+
+
+
+  <!-- 公共部分 -->
+  <div class="mmm_footer">
+    <ul class="clearfix">
+      <li>
+        <a href="javascript:;">登录</a>
+      </li>
+      <li>
+        <a href="javascript:;">注册</a>
+      </li>
+      <li>
+        <a href="#">返回顶部</a>
+      </li>
+    </ul>
+    <p class="footernav">
+      <span style="color: red; ">手机下载app</span>
+      <span style="color: #000;">慢慢买手机版--</span>
+      <span style="color: #666;">掌上比价平台</span>
+    </p>
+    <p style="color: #666;">m.manmanby.com</p>
+  </div>
+
+  <script type="text/html" id="dp">
+    {{ each result v i }}
+    
+    <p data-id="{{v.shopId}}"><span class="text1">{{ v.shopName }}</span><span class="xuanzhe {{i==0?'now':''}}" style="color: red;">✔</span></p>
+    
+   {{ /each }}
+  </script>
+  <script type="text/html" id="hbdq">
+    {{ each result v i }}
+    
+    <p data-id="{{v.areaId}}"><span class="text2">{{ v.areaName }}</span><span class="xuanzhe  {{i==0?'now':''}}" style="color: red;">✔</span></p>
+    
+   {{ /each }}
+  </script>
+
+  <script type="text/html" id="items"> 
+   
+    {{ each result v i }}
+    <div class="items">
+        <a href="javascript:;">
+          <img src="{{ v.productImg }}" alt="">
+          <p class="text-2">{{v.productName}}</p>
+          <div class="bottom">
+            <span class="price">&yen; {{v.productPrice}}</span>
+            <button>去凑单</button>
+          </div>
+        </a>
+      </div>
+    {{ /each }}
+  
+  </script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/gsproduct.js"></script>
+</body>
+
+</html>

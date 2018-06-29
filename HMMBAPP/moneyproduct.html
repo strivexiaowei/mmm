@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>买买买-国内折扣详情</title>
+  <link rel="stylesheet" href="css/moneyproduct.css">
+</head>
+
+<body class="bd_bgc">
+  <div class="mmm_header">
+    <a href="javascript:history.go(-1);"> &lt; </a>
+    <span style="text-align: center; color: #fff;">国内折扣</span>
+    <a href="javascript:;" class="header_app">
+      <img src="images/header_app.png" alt="">
+    </a>
+  </div>
+  <div class="mmm_search">
+    <div class="left-search">
+      <input type="search" placeholder="请输入你想比价的商品">
+    </div>
+    <button class="btn_search">搜索</button>
+  </div>
+  <!-- 公共部分 -->
+
+
+  <div class="content">
+    <div class="proDesc">
+       <!-- 挖个坑 -->
+    
+    </div>
+  </div>
+
+
+
+  <!-- 公共部分 -->
+  <div class="mmm_footer">
+    <ul class="clearfix">
+      <li>
+        <a href="javascript:;">登录</a>
+      </li>
+      <li>
+        <a href="javascript:;">注册</a>
+      </li>
+      <li>
+        <a href="#">返回顶部</a>
+      </li>
+    </ul>
+    <p class="footernav">
+      <span style="color: red; ">手机下载app</span>
+      <span style="color: #000;">慢慢买手机版--</span>
+      <span style="color: #666;">掌上比价平台</span>
+    </p>
+    <p style="color: #666;">m.manmanby.com</p>
+  </div>
+  <script type="text/html" id="proDesc">
+        {{ each result v i }}
+         <h3>{{v.productName}}</h3>
+          <div class="itemspan">
+              <span>{{v.productFrom}}</span>
+              <span>{{v.productTime}}</span>
+              <span>{{v.productTips}}</span>
+          </div>
+          <div class="img-r">
+            {{@ v.productImgSm}}
+          <p style="">{{v.productInfo2}}
+          </p>
+          <p>{{v.productInfo}}</p>
+          </div>
+          {{@ v.productImg2 }}
+          {{@ v.productCity}}
+          <a href="javascript:;" class="btn-danger">前往购买</a>
+          <div class="QR-code">
+            <img src="images/mmbweixin2.png" alt="">
+          </div>
+          {{@v.productComment}}      
+      {{ /each }}
+        
+  </script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/moneyproduct.js"></script>
+</body>
+
+</html>

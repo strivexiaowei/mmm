@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>买买买-优惠劵</title>
+  <link rel="stylesheet" href="css/coupon.css">
+</head>
+
+<body class="bd_bgc">
+  <div class="mmm_header">
+    <a href="javascript:history.go(-1)"> &lt; </a>
+    <span style="text-align: center; color: #fff;">优惠劵</span>
+    <a href="javascript:;" class="header_app">
+      <img src="images/header_app.png" alt="">
+    </a>
+  </div>
+  <!-- 公共部分 -->
+
+  <div class="coupon-nav">
+   
+  <ul class="clearfix">
+    
+   <!-- 挖个坑 -->
+
+    
+    
+  </ul>
+  </div>
+
+
+  <!-- 公共部分 -->
+  <div class="mmm_footer">
+    <ul class="clearfix">
+      <li>
+        <a href="javascript:;">登录</a>
+      </li>
+      <li>
+        <a href="javascript:;">注册</a>
+      </li>
+      <li>
+        <a href="#">返回顶部</a>
+      </li>
+    </ul>
+    <p class="footernav">
+      <span style="color: red; ">手机下载app</span>
+      <span style="color: #000;">慢慢买手机版--</span>
+      <span style="color: #666;">掌上比价平台</span>
+    </p>
+    <p style="color: #666;">m.manmanby.com</p>
+  </div>
+  
+  <script type="text/html" id="nav">
+    {{ each result v i }}
+    
+    <li>
+      <a href="{{v.couponLink}}?couponId={{v.couponId}}">
+        <img src="{{ v.couponImg }}" alt="">
+        <p>{{ v.couponTitle }}</p>
+      </a>
+    </li>
+    
+   {{ /each }}
+  </script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/coupon.js"></script>
+</body>
+
+</html>

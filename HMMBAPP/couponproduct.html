@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>买买买-优惠劵</title>
+  <link rel="stylesheet" href="css/couponproduct.css">
+</head>
+
+<body class="bd_bgc">
+  <div class="mmm_header">
+    <a href="javascript:history.go(-1)"> &lt; </a>
+    <span style="text-align: center; color: #fff;">肯德基优惠券</span>
+    <a href="javascript:;" class="header_app">
+      <img src="images/header_app.png" alt="">
+    </a>
+  </div>
+  <!-- 公共部分 -->
+  <p class="yhjheader">...点餐前出示手机中的优惠券，即可享受优惠...</p>
+  <div class="prolist">
+
+    <!-- 挖个坑 -->
+
+
+  </div>
+
+
+  <!-- 公共部分 -->
+  <div class="mmm_footer">
+    <ul class="clearfix">
+      <li>
+        <a href="javascript:;">登录</a>
+      </li>
+      <li>
+        <a href="javascript:;">注册</a>
+      </li>
+      <li>
+        <a href="#">返回顶部</a>
+      </li>
+    </ul>
+    <p class="footernav">
+      <span style="color: red; ">手机下载app</span>
+      <span style="color: #000;">慢慢买手机版--</span>
+      <span style="color: #666;">掌上比价平台</span>
+    </p>
+    <p style="color: #666;">m.manmanby.com</p>
+  </div>
+  
+  <script type="text/html" id="list">
+    {{ each result v i }}
+     <a href="javascript:;" data-id="{{v.couponProductId}}">
+      <div class="fl">{{@ v.couponProductImg}}</div>
+      <div class="massage-right">
+        <p class="text-2">{{v.couponProductName}}</p>
+        <span style="color:#000;">{{v.couponProductPrice}}</span>
+        <div  class="productFrom">
+        <span>{{v.couponProductTime}}</span>
+        </div>
+      </div>
+     </a>
+    {{ /each }}
+  </script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/couponproduct.js"></script>
+</body>
+
+</html>

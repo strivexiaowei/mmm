@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>买买买-省钱控</title>
+  <link rel="stylesheet" href="css/baicaijia.css">
+</head>
+
+<body class="bd_bgc">
+  <div class="mmm_header">
+    <a href="javascript:history.go(-1)"> &lt; </a>
+    <span style="text-align: center; color: #fff;">白菜价-淘宝内部劵</span>
+    <a href="javascript:;" class="header_app">
+      <img src="images/header_app.png" alt="">
+    </a>
+  </div>
+  <!-- 公共部分 -->
+  <div class="title-nav">
+    <div class="wraper clearfix">
+      <!-- 挖个坑 -->
+     
+    </div>
+  </div>
+  <div class="content">
+    
+    <!-- 挖个坑 -->
+
+    
+  </div>
+  <a href="#" class="top"></a>
+
+  <!-- 公共部分 -->
+  <div class="mmm_footer">
+    <ul class="clearfix">
+      <li>
+        <a href="javascript:;">登录</a>
+      </li>
+      <li>
+        <a href="javascript:;">注册</a>
+      </li>
+      <li>
+        <a href="#">返回顶部</a>
+      </li>
+    </ul>
+    <p class="footernav">
+      <span style="color: red; ">手机下载app</span>
+      <span style="color: #000;">慢慢买手机版--</span>
+      <span style="color: #666;">掌上比价平台</span>
+    </p>
+    <p style="color: #666;">m.manmanby.com</p>
+  </div>
+  <script type="text/html" id="nav">
+    {{ each result v i }}
+    <a href="javascript:;" data-titleId="{{v.titleId}}" class="{{ i===0?'now':"" }}">{{v.title}}</a>
+    {{ /each }}
+  </script>
+  <script type="text/html" id="list">
+    {{ each result v i }}
+    <div class="clearfix items">
+      <div class="fl leftimg">
+        {{@ v.productImg }}
+      
+      </div>
+      <div class="right-vol">
+        <p> {{@ v.productName }}</p>
+        <div class="pricevol">
+          {{@ v.productPrice }}
+        </div>
+        {{@ v.productCouponRemain }}
+        <div class="botton clearfix">
+          {{@ v.productCoupon}}
+          {{@ v.productHref}}
+        </div>
+      </div>
+    </div>
+
+  
+   {{ /each }}
+  </script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/iscroll.js"></script>
+  <script src="js/baicaijia.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,393 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  outline: none;
+}
+body {
+  font-family: 'Microsoft YaHei', sans-serif;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+input[type="text"],
+input[type="search"],
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-appearance: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.text-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.mmm_search {
+  height: 2rem;
+  background-color: #fff;
+  position: relative;
+  padding: 0.4rem;
+}
+.mmm_search .left-search {
+  height: 1.2rem;
+  margin-right: 2.6rem;
+  padding: 0 0.3rem;
+}
+.mmm_search .left-search input {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.6rem;
+  background-color: #f1f1f1;
+  padding-left: 0.52rem;
+  font-size: 0.52rem;
+  line-height: 1.2rem;
+}
+.mmm_search .btn_search {
+  position: absolute;
+  top: 0.4rem;
+  height: 1.2rem;
+  background-color: #ff841d;
+  right: 0;
+  width: 2.6rem;
+  border-radius: 0.6rem;
+  font-size: 0.6rem;
+  color: #fff;
+}
+.mmm_footer {
+  background-color: #efefef;
+  margin: 1rem 0;
+  text-align: center;
+}
+.mmm_footer li {
+  line-height: 1.3rem;
+  float: left;
+  width: 33.333%;
+  height: 1.3rem;
+  border: 0.04rem solid #cccccc;
+}
+.mmm_footer .footernav {
+  margin: 0.6rem 0 0.3rem;
+}
+.bd_bgc {
+  font-size: 0.48rem;
+  background-color: #f1f1f1;
+}
+.mmm_header {
+  position: relative;
+  height: 2rem;
+  background-color: #ff841d;
+}
+.mmm_header .header_logo {
+  position: absolute;
+  left: 0.7rem;
+  top: 0.5rem;
+  width: 7.6rem;
+}
+.mmm_header .header_app {
+  display: block;
+  width: 1.56rem;
+  position: absolute;
+  right: 0.2rem;
+  top: 0.4rem;
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 24px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 25px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 25.6px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 26.67px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 27.6px;
+  }
+}
+@media (min-width: 424px) {
+  html {
+    font-size: 28.27px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 32px;
+  }
+}
+@media (min-width: 540px) {
+  html {
+    font-size: 36px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 50px;
+  }
+}
+.bd_bgc {
+  background-color: #fff;
+}
+.mmm_footer {
+  background-color: #f1f1f1;
+}
+.mmm_header {
+  line-height: 2rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+.mmm_header a {
+  float: left;
+  padding-left: 0.6rem;
+  font-weight: 1000;
+  font-family: "宋体";
+  color: #fff;
+}
+.mmm_header span {
+  display: block;
+  overflow: hidden;
+}
+.sitenav {
+  padding: 0.4rem 1.76rem 0 1.76rem;
+}
+.sitenav a {
+  margin-bottom: 0.22rem;
+  float: left;
+  margin-right: 0.22rem;
+  height: 1.76rem;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  line-height: 1.76rem;
+  padding: 0 0.34rem;
+}
+.sitenav a img {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  vertical-align: middle;
+}

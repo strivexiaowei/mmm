@@ -1,0 +1,126 @@
+@import "variable";
+.mmm_footer {
+  background-color: #f1f1f1;
+}
+.mmm_header {
+  line-height: 100rem/@base;
+  font-size: 34rem/@base;
+  font-weight: 700;
+  a {
+    float: left;
+    padding-left: 30rem/@base;
+    font-weight: 1000;
+    font-family: "宋体";
+    color: #fff;
+  }
+  span {
+    display: block;
+    overflow: hidden;
+  }
+}
+.gspronav {
+  position: relative;
+  height: 75rem/@base;
+  line-height:75rem/@base;
+  border-bottom: 1px solid #ccc;
+  .left-nav{
+    margin-right: 75rem/@base;
+    height: 100%;
+    // background-color: red;
+    position: relative;
+    border-right: 1px solid #ccc;
+    z-index: 555;
+    a {
+      float: left;
+      width: 33.33%;
+      height: 100%;
+      text-align: center;
+      background-color: #fff;
+      .sublist {
+        position: absolute;
+        left: 0;
+        top:75rem/@base;
+        display: none;
+        width: 300%;
+        text-align: left;
+        background-color: #fff;
+        p {
+          position: relative;
+          padding-left: 75rem/@base;
+          border-bottom: 1px solid #ccc;
+          .xuanzhe {
+            margin-left: 300rem/@base;
+            width: 75rem/@base;
+            height: 75rem/@base;
+            // text-align: right;
+            display: none;
+          }
+          .xuanzhe.now {
+            display:inline-block;
+          }
+        }
+      }
+      .sublist.now {
+        display: block;
+      }
+    }
+  }
+  .right-search{
+    right: 0;
+    top: 0;
+    position: absolute;
+    width:75rem/@base;
+    height: 100%;
+    // background-color: blue;
+    text-align: center;
+    line-height: 75rem/@base;
+    color: #666;
+    font-size: 34rem/@base;
+  }
+}
+.gspcontent {
+  padding-left:18rem/@base;
+  .items {
+  margin-top:22rem/@base;
+   height: 460rem/@base;
+   width: 50%;
+   float: left;
+   padding-right:18rem/@base;
+   a {
+     position: relative;
+     display: block;
+     background-color: #fff;
+     height: 100%;
+     &:active {
+       background-color: none;
+     }
+    img {
+      max-height: 340rem/@base;
+    }
+    p {
+      padding: 0 10rem/@base;
+      height: 62rem/@base;
+    }
+    .bottom {
+      position: absolute;
+      height: 52rem/@base;
+      left: 10rem/@base;
+      right: 10rem/@base;
+      bottom:10rem/@base;
+      line-height:52rem/@base;
+      .price {
+        color: #fa7722;
+      }
+      button {
+        float: right;
+        height: 100%;
+        width: 124rem/@base;
+        background-color: #ff9501;
+        border-radius: 10rem/@base;
+        color: #fff;
+        outline: none;
+      }
+    }
+   }
+  }
+}

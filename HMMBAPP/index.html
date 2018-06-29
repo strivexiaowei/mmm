@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>买买买-首页</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="bd_bgc">
+  <div class="mmm_header">
+    <img src="images/header_logo.png" alt="" class="header_logo">
+    <a href="javascript:;" class="header_app">
+      <img src="images/header_app.png" alt="">
+    </a>
+  </div>
+  <div class="mmm_search">
+    <div class="left-search">
+      <input type="search" placeholder="请输入你想比价的商品">
+    </div>
+    <button class="btn_search">搜索</button>
+  </div>
+  <div class="mmm_nav">
+    <ul class="clearfix">
+      <!-- 挖个坑 -->
+    </ul>
+  </div>
+  <div class="mmm_discount">
+    <div class="title clearfix">
+      <h3 class="fl">超值折扣推荐</h3>
+      <a href="javascript:;" class="fr">
+        <img src="images/more.png" alt="">
+      </a>
+    </div>
+    <div class="content">
+      <!-- 挖个坑 -->
+    </div>
+    <div class="more-product">
+      <a href="moneyctrl.html?pageid=1">更多优惠信息》</a>
+    </div>
+    <div class="title clearfix">
+      <h3 class="fl">品牌排行</h3>
+      <a href="javascript:;" class="fr">
+        <img src="images/more.png" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="mmm_footer">
+    <ul class="clearfix">
+      <li>
+        <a href="javascript:;">登录</a>
+      </li>
+      <li>
+        <a href="javascript:;">注册</a>
+      </li>
+      <li>
+        <a href="#">返回顶部</a>
+      </li>
+    </ul>
+    <p class="footernav">
+      <span style="color: red; ">手机下载app</span>
+      <span style="color: #000;">慢慢买手机版--</span>
+      <span style="color: #666;">掌上比价平台</span>
+    </p>
+    <p style="color: #666;">m.manmanby.com</p>
+  </div>
+  <script type="text/html" id="tpl">
+    {{ each result v i }}
+    <li class="{{i===7?'more':''}}">
+      <a href="{{v.titlehref}}?pageid=1">
+         {{@v.img}}
+        <p>{{v.name}}</p>
+      </a>
+    </li>
+    {{ /each }}
+  </script>
+  <script type="text/html" id="product">
+    {{ each result v i }}
+    <a href="moneyproduct.html?productId={{v.productId}}">
+      <div class="fl">{{@ v.productImgSm}}</div>
+      <div class="massage-right">
+        <p class="text-2">{{v.productName}}<span class="productPinkage">{{v.productPinkage}}</span></p>
+        <div  class="productFrom">
+        <span class="fl">{{v.productFrom}}∣{{v.productTime}}</span>
+        <span class="fr">{{v.productComCount}}</span>
+        </div>
+      </div>
+    </a>
+    {{ /each }}
+  </script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+@import "variable";
+.bd_bgc {
+  background-color: #fff;
+}
+.mmm_header {
+  line-height: 100rem/@base;
+  font-size: 34rem/@base;
+  font-weight: 700;
+  a {
+    float: left;
+    padding-left: 30rem/@base;
+    font-weight: 1000;
+    font-family: "宋体";
+    color: #fff;
+  }
+  span {
+    display: block;
+    overflow: hidden;
+  }
+}
+
+.content {
+  a {
+    position: relative;
+    float: left;
+    display: block;
+    width: 50%;
+    height: 530rem/@base;
+    border-bottom: 1px solid #ccc;
+    padding:0 25rem/@base  35rem/@base ;
+    img {
+      max-height: 330rem/@base;
+    }
+    h3 {
+      height: 80rem/@base;
+    }
+    .price {
+      color: #ff5109;
+      line-height: 40rem/@base;
+    }
+    .proDesc {
+      position: absolute;
+      bottom: 35rem/@base;
+      left: 25rem/@base;
+    }
+  }
+  a:nth-child(odd){
+    border-right: 1px solid #ccc;
+  }
+}

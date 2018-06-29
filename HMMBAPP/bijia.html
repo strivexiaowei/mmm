@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>买买买-首页</title>
+  <link rel="stylesheet" href="fa/css/font-awesome.css">
+  <link rel="stylesheet" href="css/bijia.css">
+</head>
+
+<body class="bd_bgc">
+  <div class="mmm_header">
+    <img src="images/header_logo.png" alt="" class="header_logo">
+    <a href="javascript:;" class="header_app">
+      <img src="images/header_app.png" alt="">
+    </a>
+  </div>
+  <div class="mmm_search">
+    <div class="left-search">
+      <input type="search" placeholder="请输入你想比价的商品">
+    </div>
+    <button class="btn_search">搜索</button>
+  </div>
+  <!-- 公共部分完成 -->
+
+  <div class="mmm_content">
+    <div class="title clearfix">
+      <div class="fl bijiaNav">
+        <!-- 挖个坑 -->
+      </div>
+      <div class="fr">
+        <button>筛选</button>
+      </div>
+    </div>
+    <div class="content">
+      <!-- 挖个坑 -->
+    </div>
+    <div class="warn">
+      <p>*实际售价以各网站列出的实时售价为准，我们提供的价格可能有数小时或数日的延迟。</p>
+    </div>
+    <div class="evaluate-title">
+      网友评价
+    </div>
+    <div class="evaluate">
+
+
+      <!-- 挖个坑 -->
+
+    </div>
+    <div class="evaluatemore">
+        <a href="javascript:;" class="moreevaluate"> 查看更多的评价</a>
+    </div>
+  </div>
+  <!-- 底部 -->
+  <div class="mmm_footer">
+    <ul class="clearfix">
+      <li>
+        <a href="javascript:;">登录</a>
+      </li>
+      <li>
+        <a href="javascript:;">注册</a>
+      </li>
+      <li>
+        <a href="#">返回顶部</a>
+      </li>
+    </ul>
+    <p class="footernav">
+      <span style="color: red; ">手机下载app</span>
+      <span style="color: #000;">慢慢买手机版--</span>
+      <span style="color: #666;">掌上比价平台</span>
+    </p>
+    <p style="color: #666;">m.manmanby.com</p>
+  </div>
+  <script type="text/html" id="bijianav">
+    {{ each result v i}}
+    <a href="index.html">首页/</a>
+    <a href="javascript:history.go(-1);">{{v.category}}/</a>
+    <a href="javascript:;" class="categoryname">{{v.brandName}}</a>
+    {{ /each }}
+  </script>
+  <script type="text/html" id="product-bijia">
+    {{ each result v i }}
+    <div class="banner">
+        <p>{{v.productName}}</p>
+        {{@ v.productImg}}
+        <div class="collect">收藏</div>
+      </div>
+      <div class="bijianav">
+        <a href="javascript:;">比价购买</a>
+        <a href="javascript:;">产品参数</a>
+        <a href="javascript:;">评价（444）</a>
+      </div>
+      <div class="bijiaprice clearfix">
+        {{@ v.bjShop}}
+      </div>
+      {{ /each }}
+  </script>
+  <script type="text/html" id="evaluate">
+  {{ each result v i }}
+  <div class="items">
+        <div class="items-title clearfix">
+          <div class="fl">
+            {{v.comName}}
+          </div>
+          <div class="fr">
+            <p>{{v.comTime}}</p>
+            <p>{{v.comFrom}}</p>
+          </div>
+        </div>
+        <p>{{v.comContent}}</p>
+      </div>
+  {{ /each }}
+  </script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/bijia.js"></script>
+</body>
+
+</html>
