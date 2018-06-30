@@ -41,7 +41,7 @@
         left: 0;
         top:75rem/@base;
         display: none;
-        width: 300%;
+        width: 100%;
         text-align: left;
         background-color: #fff;
         p {
@@ -49,11 +49,16 @@
           padding-left: 75rem/@base;
           border-bottom: 1px solid #ccc;
           .xuanzhe {
-            margin-left: 300rem/@base;
+            // float: right;
+            position: absolute;
+            height:75rem/@base;
+            line-height:75rem/@base;
+            top: 0;
+            right: 0;
+            // margin-left: 300rem/@base;
             width: 75rem/@base;
-            height: 75rem/@base;
-            // text-align: right;
             display: none;
+            // z-index: 9999;
           }
           .xuanzhe.now {
             display:inline-block;

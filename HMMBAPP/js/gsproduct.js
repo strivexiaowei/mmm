@@ -37,7 +37,12 @@ $(function () {
   $(".left-nav a .hb").on("click", "p", function (e) {
     e.preventDefault();
     // console.log("hehe");
-    $(".text-info2").text($(this).find(".text2").text());
+    var text = $(this).find(".text2").text();
+    text = text.split("（")[0];
+    console.log(text);
+
+
+    $(".text-info2").text(text);
     $(this).find(".xuanzhe").addClass("now");
     $(this).siblings().find(".xuanzhe").removeClass("now");
     areaid = $(this).data("id");

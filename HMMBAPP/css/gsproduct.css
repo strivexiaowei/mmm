@@ -394,7 +394,7 @@ img {
   left: 0;
   top: 1.5rem;
   display: none;
-  width: 300%;
+  width: 100%;
   text-align: left;
   background-color: #fff;
 }
@@ -404,9 +404,12 @@ img {
   border-bottom: 1px solid #ccc;
 }
 .gspronav .left-nav a .sublist p .xuanzhe {
-  margin-left: 6rem;
-  width: 1.5rem;
+  position: absolute;
   height: 1.5rem;
+  line-height: 1.5rem;
+  top: 0;
+  right: 0;
+  width: 1.5rem;
   display: none;
 }
 .gspronav .left-nav a .sublist p .xuanzhe.now {

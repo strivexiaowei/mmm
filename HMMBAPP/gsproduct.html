@@ -22,22 +22,22 @@
   <div class="gspronav">
     <div class="left-nav">
       <a href="#">
-        <span class="text-info1">京东 </span><span>▲</span>
+        <span class="text-info1">京东 </span><span class="fa fa-caret-up"></span>
         <div class="sublist jd">
           <!-- 挖个坑 -->
         </div>
       </a>
       <a href="#">
-        <span class="text-info2">华北 </span><span>▲</span>
+        <span class="text-info2">华北 </span><span class="fa fa-caret-up"></span>
         <div class="sublist hb">
           <!-- 挖个坑 -->
         </div>
       </a>
       <a href="#">
-        <span>全部价格</span> <span>▲</span>
+        <span>全部价格</span> <span class="fa fa-caret-up"></span>
         <div class="sublist">
-          <p>全部价格
-            <span class="fr" style="color: red;">✔</span>
+          <p class="clearfix"><span>全部价格</span>
+            <span class="fa fa-check xuanzhe" style="color: red; display: inline-block;"></span>
           </p>
         </div>
       </a>
@@ -81,14 +81,14 @@
   <script type="text/html" id="dp">
     {{ each result v i }}
     
-    <p data-id="{{v.shopId}}"><span class="text1">{{ v.shopName }}</span><span class="xuanzhe {{i==0?'now':''}}" style="color: red;">✔</span></p>
+    <p data-id="{{v.shopId}}"><span class="text1">{{ v.shopName }}</span><span class="xuanzhe  fa fa-check" style="color: red;"></span></p>
     
    {{ /each }}
   </script>
   <script type="text/html" id="hbdq">
     {{ each result v i }}
     
-    <p data-id="{{v.areaId}}"><span class="text2">{{ v.areaName }}</span><span class="xuanzhe  {{i==0?'now':''}}" style="color: red;">✔</span></p>
+    <p data-id="{{v.areaId}}"><span class="text2">{{ v.areaName }}</span><span class="xuanzhe fa fa-check" style="color: red;"></span></p>
     
    {{ /each }}
   </script>
