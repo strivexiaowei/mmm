@@ -1,0 +1,87 @@
+@import 'common';
+
+// 第二种头部公共样式
+.container {
+  padding-top: 1.333333rem /* 100/75 */;
+}
+.mmp_header {
+  padding: 0;
+  height: 1.333333rem /* 100/75 */;
+  line-height: 1.333333rem /* 100/75 */;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  .fl {
+  color: #fff;
+  width: 1.333333rem /* 100/75 */;
+  height: 1.333333rem /* 100/75 */;
+    span {
+      font-size: .493333rem /* 37/75 */;
+    }
+  }
+  .fr {
+    width: 1.333333rem /* 100/75 */;
+    height: 1.333333rem /* 100/75 */;
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  h3 {
+    overflow: hidden;
+    font-size: .6rem /* 45/75 */;
+    padding: 0;
+    margin: 0;
+    height: 1.333333rem /* 100/75 */;
+    line-height: 1.333333rem /* 100/75 */;
+    color: #fff;
+  }
+}
+
+.inladdiscount {
+  background-color: #fff;
+  margin-bottom: .266667rem /* 20/75 */;
+  li {
+    padding: .266667rem /* 20/75 */;
+    font-size: .346667rem /* 26/75 */;
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    img {
+      width: 3.8rem /* 285/75 */;
+      height: 3.8rem /* 285/75 */;
+      margin: 0 auto;
+    }
+    h4 {
+      height: .986667rem /* 74/75 */;
+      font-size: .346667rem /* 26/75 */;
+      margin: .2rem /* 15/75 */ 0;
+      line-height: .533333rem /* 40/75 */;
+    }
+    .subtit {
+      color: orange;
+      height: .986667rem /* 74/75 */;
+      font-weight: normal;
+    }
+    .info {
+      color: #ccc;
+      font-size: .293333rem /* 22/75 */;
+    }
+  }
+  li:nth-of-type(2n+1) {
+    border-right: 1px solid #ccc;
+  }
+}
+
+p.tips {
+  display: none;
+  padding-left: .266667rem /* 20/75 */;
+  font-size: .266667rem /* 20/75 */;
+  text-align: center;
+}
+p.show {
+  display: block;
+}

@@ -1,0 +1,198 @@
+// out: false
+@import 'variable';
+@import 'normalize';
+@import 'base';
+
+
+h1,h2,h3,h4,h5,h6 { 
+  font-size:100%; 
+  font-weight:normal; 
+}
+
+i,b,em {
+  font-style: normal;
+}
+
+.container {
+  // width: 100%;
+  // max-width: 750px;
+  // min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.mmp_header {
+  background-color: @baseColor;
+  padding: .266667rem;
+  .fl img {
+    width: 4.946667rem /* 371/75 */;
+    height: .666667rem /* 50/75 */;
+  }
+  .fr img {
+    width: .666667rem /* 50/75 */;
+    height: .666667rem /* 50/75 */;
+  }
+}
+
+// 搜索
+.mmp_search {
+  background-color: #fff;
+  padding-top: .266667rem /* 20/75 */;
+  padding-left: .266667rem /* 20/75 */;
+  padding-bottom: .266667rem /* 20/75 */;
+  text-align: center;
+  margin-bottom: .266667rem /* 20/75 */;
+  position: relative;
+  input {
+    height: .8rem /* 60/75 */;
+    width: 7.6rem /* 570/75 */;
+    border-radius: 999px;
+    background-color: #f1f1f1;
+    text-indent: .666667rem /* 50/75 */;
+    color: #666;
+    font-size: .32rem /* 24/75 */;
+    float: left;
+    margin-right: .16rem /* 12/75 */;
+  }
+  button {
+    height: .8rem /* 60/75 */;
+    width: 1.706667rem /* 128/75 */;
+    background-color: @baseColor;
+    border-radius: 999px;
+    color: white;
+    font-size: .373333rem /* 28/75 */;
+    float: left;
+  } 
+  .result {
+    position: absolute;
+    top: 1.333333rem /* 100/75 */;
+    left: 0;
+    z-index: 999;
+    // border-top: 1px solid #ccc;
+    width: 100%;
+    // display: none;
+    li {
+      padding-left: .266667rem /* 20/75 */;
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+      a {
+        text-align: left;
+        height: .733333rem /* 55/75 */;
+        line-height: .733333rem /* 55/75 */;
+        width: 100%;
+        font-size: .293333rem /* 22/75 */;
+      }
+    }
+  }
+}
+
+// 底部样式
+.footer {
+  padding-bottom: .266667rem /* 20/75 */;
+  .pinpai {
+    background-color: @baseColor;
+    color: #fff;
+    padding: .16rem /* 12/75 */ .266667rem ;
+    font-size: .426667rem /* 32/75 */;
+    margin-bottom: .666667rem /* 50/75 */;
+    img {
+      height: .56rem /* 42/75 */;
+      width: .56rem /* 42/75 */;
+    }
+
+  }
+  ul.f_tips {
+    font-size: .346667rem /* 26/75 */;
+    background-color: #efefef;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: .466667rem /* 35/75 */;
+    li {
+      float: left;
+      padding: .266667rem /* 20/75 */ 1.066667rem /* 80/75 */;
+      vertical-align: middle;
+      border-right: 1px solid #ccc;
+    }
+    li:last-of-type {
+      border-right: none;
+      padding: .266667rem /* 20/75 */ .933333rem /* 70/75 */
+    }
+    img {
+      width: .426667rem /* 32/75 */;
+      height: .426667rem /* 32/75 */;
+      display: inline;
+      vertical-align: top;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: .346667rem /* 26/75 */;
+    a {
+      color: red;
+      display: inline-block;
+    }
+    span {
+      color: #666;
+    }
+  }
+}
+
+// 面包屑导航
+.mmp_nav {
+  padding: 0 .266667rem /* 20/75 */;
+  background-image: linear-gradient(#fff, #ddd);
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  li {
+    float: left;
+    font-size: .4rem /* 30/75 */;
+    line-height: 1.013333rem /* 76/75 */
+  }
+
+  button {
+    padding: .093333rem /* 7/75 */ .4rem /* 30/75 */;
+    font-size: .373333rem /* 28/75 */;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-image: linear-gradient(#ddd, #fff);
+    position: absolute;
+    top: 50%;
+    right: .266667rem /* 20/75 */;
+    transform: translateY(-50%);
+  }
+
+}
+.crumbs li.now a {
+  color: #777;
+}
+
+// page
+.page {
+  padding: .266667rem /* 20/75 */ 0;
+  span {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    display: block;
+    font-size: .32rem /* 24/75 */;
+    a {
+      width: 2.133333rem /* 160/75 */;
+      padding: .16rem /* 12/75 */ .4rem /* 30/75 */;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 0 auto;
+    }
+  }
+  select {
+    display: block;
+    width: 1.6rem /* 120/75 */;
+    height: 100%;
+    border: 1px solid #ccc;
+    padding: .16rem /* 12/75 */ .133333rem /* 10/75 */;
+    margin: 0 auto;
+  }
+}
+
+
+

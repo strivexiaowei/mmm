@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>国内折扣</title>
+  <link rel="stylesheet" href="css/moneyproduct.css">
+  <link rel="stylesheet" href="fonts/iconfont.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- 头部 -->
+    <header id="top" class="mmp_header clearfix">
+      <a href="javascript: history.go(-1)" class="fl">
+        <span class="iconfont icon-fanhui"></span>
+      </a>
+      <div class="fr">
+        <img src="images/header_app.png" alt="">
+      </div>
+      <h3>
+        国内折扣
+      </h3>
+    </header>
+
+    <!-- 中间部分 -->
+    <div class="mmp_moneyproduct">
+      <!-- 1号坑 -->
+    </div>
+
+    <div class="mmp_area">
+      <!-- 2号坑 -->
+    </div>
+    <div class="golink">
+      <a href="redirect.aspx?tjid=521575&amp;y=cu_share" target="_blank">
+        前往购买</a>
+    </div>
+
+    <div class="box_img">
+      <img src="images/mmbweixin2.png" alt="">
+    </div>
+    <div class="mmp_message">
+      <!-- 3号坑 -->
+    </div>
+
+    <!-- 尾部 -->
+    <footer class="footer">
+      <div class="pinpai clearfix">
+        <span class="fl">品牌排行</span>
+        <img class="fr" src="images/more.png" alt="">
+      </div>
+
+      <ul class="f_tips clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li>
+          <a href="#top">
+            <img src="images/top.jpg" alt=""> 返回顶部
+          </a>
+        </li>
+      </ul>
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        慢慢买手机版
+        <span> -- 掌上比价平台</span>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </footer>
+  </div>
+
+  <!-- 模板一 -->
+  <script type="text/html" id="tpl">
+    {{each result v i}}
+    <div class="mp_t">
+      <h3>{{v.productName}}</h3>
+      <div class="info text-rows">
+        <span class="mall">{{v.productFrom}}</span>
+        <span class="addtime">{{v.productTime}}</span>
+        <span class="author">{{v.productTips}}</span>
+      </div>
+    </div>
+    <div class="mp_content">
+      <div class="picwrap">
+        {{@v.productImgSm}}
+      </div>
+      <div class="mp_conn">
+        <!--内容开始-->
+        <p>{{v.productInfo}}</p>
+        <p></p>
+        <p>{{v.productInfo1}}</p>
+        <p></p>
+        <p>
+          {{@v.productImgLg}}
+          <p></p>
+          <!--内容结束-->
+      </div>
+    </div>
+    {{/each}}
+  </script>
+
+  <!-- 模板二 -->
+  <script type="text/html" id="tpl2">
+    {{each result v i}} {{@v.productCity}} {{/each}}
+  </script>
+  <!-- 模板三 -->
+  <script type="text/html" id="tpl3">
+    {{each result v i}} {{@v.productComment}} {{/each}}
+  </script>
+
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common.js"></script>
+
+  <script src="js/moneyproduct.js"></script>
+
+  <script>
+    // $(this).next
+  </script>
+</body>
+
+</html>

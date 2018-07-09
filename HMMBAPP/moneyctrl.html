@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>买买买-省钱控</title>
+  <link rel="stylesheet" href="fa/css/font-awesome.css">
   <link rel="stylesheet" href="css/moneyctrl.css">
 </head>
 
@@ -32,13 +33,13 @@
 
 
   <div class="paginator">
-      <a class="mfenye-last">上一页</a>
-      <select class="mfenye-select">
+    <a class="mfenye-last">上一页</a>
+    <select class="mfenye-select">
 
-        <!-- 挖个坑 -->
+      <!-- 挖个坑 -->
 
-      </select>
-      <a class="mfenye-next">下一页</a>
+    </select>
+    <a class="mfenye-next">下一页</a>
   </div>
   <!-- 公共部分 -->
   <div class="mmm_footer">
@@ -68,7 +69,9 @@
         <p class="text-2">{{v.productName}}<span class="productPinkage">{{v.productPinkage}}</span></p>
         <div  class="productFrom">
         <span class="fl">{{v.productFrom}}∣{{v.productTime}}</span>
-        <span class="fr">{{v.productComCount}}</span>
+        <span class="fr fa fa-commenting-o">
+          {{ v.productComCount.replace("有","").replace("人评论","") }}
+        </span>
         </div>
       </div>
     </a>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+  <link rel="stylesheet" href="fonts/iconfont.css">
+  <link rel="stylesheet" href="css/brandTitle.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- 头部 -->
+    <header id="top" class="mmp_header clearfix">
+      <a href="index.html" class="fl">
+        <img src="images/header_logo.png" alt="">
+      </a>
+      <div class="fr">
+        <img src="images/header_app.png" alt="">
+      </div>
+    </header>
+
+    <!-- 搜索框 -->
+    <div class="mmp_search clearfix">
+      <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+      <button>搜索</button>
+    </div>
+
+    <!-- 面包屑导航 -->
+    <div class="mmp_nav clearfix">
+      <ul class="crumbs fl clearfix">
+        <li>
+          <a href="index.html">首页 ></a>
+        </li>
+        <li class="now">
+          <a href="brandTitle.html">全部分类 ></a>
+        </li>
+        <!-- <li>
+        <a class="categoryTxt" href="">
+          <span></span> ></a>
+      </li> -->
+      </ul>
+    </div>
+
+    <div class="title">
+      热门品牌排行
+    </div>
+
+    <!-- 品牌标题 -->
+    <div class="category">
+      <ul class="category_title">
+        <!-- 占个坑 -->
+      </ul>
+    </div>
+
+
+    <!-- 尾部 -->
+    <footer class="footer">
+
+      <ul class="f_tips clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li>
+          <a href="#top">
+            <img src="images/top.jpg" alt=""> 返回顶部
+          </a>
+        </li>
+      </ul>
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        慢慢买手机版
+        <span> -- 掌上比价平台</span>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </footer>
+  </div>
+
+  <!-- 模板一 -->
+  <script type="text/html" id="tpl">
+    {{each result v i}}
+    <li data-id="{{v.brandTitleId}}">
+      <a class='tap' href="brand.html?brandtitleid={{v.brandTitleId}}&brandTitle={{v.brandTitle.replace('十大品牌', '')}}">
+        {{v.brandTitle}}
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
+  <!-- 模板二 -->
+  <script type="text/html" id="tpl2">
+    {{ each result v i }} {{ /each }}
+  </script>
+
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/brandTitle.js"></script>
+</body>
+
+</html>

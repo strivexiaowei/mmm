@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>凑单品</title>
+  <link rel="stylesheet" href="fonts/iconfont.css">
+  <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+
+<body>
+
+  <ul class="container">
+    <!-- 头部 -->
+    <header id="top" class="mmp_header clearfix">
+      <a href="javascript: history.go(-1)" class="fl">
+        <span class="iconfont icon-fanhui"></span>
+      </a>
+      <div class="fr">
+        <img src="images/header_app.png" alt="">
+      </div>
+      <h3>
+        凑单品
+      </h3>
+    </header>
+
+    <!-- 中间内容区 -->
+    <div class="cdp">
+      <div class="cdp-head-cat">
+        <div class="search">
+          <a class="iconfont icon-sousuo" href="javascript:;">
+          </a>
+        </div>
+        <div id="wrapper" class="clearfix">
+          <div class="t1 title">
+            <div class="tit">
+              <label for="shop">一号店</label>
+              <span class="iconfont icon-sanjiao2"></span>
+            </div>
+
+          </div>
+          <div class="t2 title">
+            <div class="tit">
+              <label for='area'>华北</label>
+              <span class="iconfont icon-sanjiao2"></span>
+            </div>
+          </div>
+          <div class="t3 title">
+            <div class="tit">
+              <label for="all_p">全部价格</label>
+              <span class="iconfont icon-sanjiao2"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <input type="checkbox" id="shop">
+    <input type="checkbox" id="area">
+    <input type="checkbox" id="all_p">
+    <ul class="clearfix shop tips">
+      <!-- 挖个坑 -->
+
+    </ul>
+    <ul class="clearfix area tips">
+      <!-- 挖个坑 -->
+    </ul>
+    <ul class="clearfix all_p tips">
+      <!-- 坑 -->
+      <li>
+        <a href="javascript:;">全部商品
+          <span class="iconfont icon-duigou fr now"></span>
+        </a>
+      </li>
+
+    </ul>
+
+    <ul class="gs_product clearfix">
+      <!-- 挖个坑坑 -->
+    </ul>
+
+    <!-- 尾部 -->
+    <footer class="footer">
+      <ul class="f_tips clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li>
+          <a href="#top">
+            <img src="images/top.jpg" alt="">返回顶部
+          </a>
+        </li>
+      </ul>
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        慢慢买手机版
+        <span> -- 掌上比价平台</span>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </footer>
+
+    <!-- 模板一 -->
+    <script type="text/html" id="tpl">
+      {{each result v i}}
+      <li data-id="{{v.shopId}}">
+        <a href="javascript:;">{{v.shopName}}
+          <span data-id="{{v.shopId}}" class="iconfont icon-duigou fr"></span>
+        </a>
+      </li>
+      {{/each}}
+    </script>
+
+    <!-- 模板二 -->
+    <script type="text/html" id="tpl2">
+      {{each result v i}}
+      <li data-id="{{v.areaId}}">
+        <a data-id="{{v.areaId}}" href="javascript:;">{{v.areaName}}
+          <span class="iconfont icon-duigou fr"></span>
+        </a>
+      </li>
+      {{/each}}
+    </script>
+
+    <script type="text/html" id='tpl3'>
+      {{each result v i }}
+      <li>
+        <a data-id="{{v.productId}}" href="javascript:;">
+          <img src="{{v.productImg}}" alt="">
+          <p class="tit text-rows-2">{{v.productName}}</p>
+          <p class="clearfix pri">
+            <span class="fl">{{v.productPrice}}</span>
+            <button class="fr"> 去凑单 </button>
+          </p>
+        </a>
+      </li>
+      {{/each}}
+    </script>
+
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/common/Route.js"></script>
+    <script src="js/common/Tools.js"></script>
+    <script src="js/common.js"></script>
+
+    <script src="js/gsproduct.js"></script>
+
+    <script>
+      // $(this).next
+    </script>
+</body>
+
+</html>

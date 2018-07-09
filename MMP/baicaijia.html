@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>白菜价页面</title>
+  <link rel="stylesheet" href="fonts/iconfont.css">
+  <link rel="stylesheet" href="css/baicaijia.css">
+</head>
+
+<body>
+
+  <h3 class="container">
+    <!-- 头部 -->
+    <header id="top" class="mmp_header clearfix">
+      <a href="javascript: history.go(-1)" class="fl">
+        <span class="iconfont icon-fanhui"></span>
+      </a>
+      <div class="fr">
+        <img src="images/header_app.png" alt="">
+      </div>
+      <h3>
+        白菜价-淘宝内部劵
+      </h3>
+    </header>
+    <!-- 中间部分 -->
+
+    <main class="coupon-title">
+      <div class="bcj-head-cat">
+        <div class="fr">
+          <a class="iconfont icon-sousuo" href="javascript:;">
+          </a>
+        </div>
+        <div id="wrapper">
+          <ul class="clearfix">
+            <!-- 挖个坑 -->
+          </ul>
+        </div>
+      </div>
+      <ul class="bcj-list">
+        <!-- 大坑 -->
+      </ul>
+    </main>
+
+    <!-- 尾部 -->
+    <footer class="footer">
+
+      <ul class="f_tips clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li>
+          <a href="#top">
+            <img src="images/top.jpg" alt=""> 返回顶部
+          </a>
+        </li>
+      </ul>
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        慢慢买手机版
+        <span> -- 掌上比价平台</span>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </footer>
+    </div>
+    <!-- 模板一 -->
+    <script type="text/html" id="tpl">
+      {{each result v i}}
+      <li>
+        <a data-titleid="{{v.titleId}}" class="{{i == 0 ? 'now': ''}}" href="javascript:;">{{v.title}}</a>
+      </li>
+      {{/each}}
+    </script>
+
+    <!-- 模板二 -->
+    <script type="text/html" id="tpl2">
+      {{each result v i}}
+      <li daata-productid='productId' class='clearfix'>
+        <a href="https://shop.m.taobao.com/shop/coupon.htm?&amp;sellerId=356601422&amp;activityId=0e654846c6c94c9e84123ae597fcd237"
+          class="goquan" target="_blank">
+          <div class="fl">
+            {{@v.productImg}}
+          </div>
+          <div class="desc">
+            <div class="tit">
+              {{@v.productName}}
+            </div>
+            <div class="pri">
+              {{@v.productPrice}}
+            </div>
+            <div class="bar clearfix">
+              {{@v.productCouponRemain}}
+            </div>
+            <div class="youhui clearfix">
+              {{@v.productCoupon}}
+              {{@v.productHref}}
+            </div>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+    </script>
+
+
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/common/Route.js"></script>
+    <script src="js/common/Tools.js"></script>
+    <script src="lib/iscroll/iscroll.js"></script>
+    <script src="js/common.js"></script>
+
+    <script src="js/baicaijia.js"></script>
+
+    <script>
+      // $(this).next
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>分类页</title>
+  <link rel="stylesheet" href="css/category.css">
+  <link rel="stylesheet" href="fonts/iconfont.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- 头部 -->
+    <header id="top" class="mmp_header clearfix">
+      <a href="index.html" class="fl">
+        <img src="images/header_logo.png" alt="">
+      </a>
+      <div class="fr">
+        <img src="images/header_app.png" alt="">
+      </div>
+    </header>
+
+    <!-- 搜索框 -->
+    <div class="mmp_search clearfix">
+      <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+      <button>搜索</button>
+      <ul class="result">
+        <!-- 搜索坑 -->
+      </ul>
+    </div>
+
+    <!-- 分类列表 -->
+    <div class="category">
+      <ul class="category_title">
+        <!-- 占个坑 -->
+      </ul>
+    </div>
+
+    <!-- 尾部 -->
+    <footer class="footer">
+      <div class="pinpai clearfix">
+        <span class="fl">品牌排行</span>
+        <img class="fr" src="images/more.png" alt="">
+      </div>
+
+      <ul class="f_tips clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li>
+          <a href="#top">
+            <img src="images/top.jpg" alt=""> 返回顶部
+          </a>
+        </li>
+      </ul>
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        慢慢买手机版
+        <span> -- 掌上比价平台</span>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </footer>
+  </div>
+
+  <!-- 模板一 -->
+  <script type="text/html" id="tpl">
+    {{each result v i}}
+
+    <li data-id="{{v.titleId}}">
+      <a class='tap' href="javascript:;">
+        {{v.title}}
+      </a>
+      <ul class="category-content clearfix">
+
+      </ul>
+    </li>
+    {{/each}}
+  </script>
+
+  <!-- 模板二 -->
+  <script type="text/html" id="tpl2">
+    {{each result v i}}
+    <li data-id='{{v.categoryId}}'>
+      <a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1">
+        {{v.category}}
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
+  <script type="text/html" id="tpl3">
+    {{each result v i}}
+    <li><a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1">{{v.category}}</a></li>
+    {{/each}}
+  </script>
+
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/category.js"></script>
+
+  <script>
+    
+  </script>
+</body>
+
+</html>

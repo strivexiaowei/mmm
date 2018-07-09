@@ -10,6 +10,7 @@
         author: 'Jepson'
     };
 
+
     /* 扩展函数 */
     Tools.extend = Tools.fn.extend = function( obj ) {
         for ( var k in obj ) {

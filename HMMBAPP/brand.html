@@ -46,14 +46,14 @@
     <p class="secend">平板电视产量销量排行</p>
   </div>
   <div class="product-brand">
-      <!-- 挖个坑 -->
-    </div>
-    <div class="evaluate">
+    <!-- 挖个坑 -->
+  </div>
+  <div class="evaluate">
 
 
-        <!-- 挖个坑 -->
-  
-      </div>
+    <!-- 挖个坑 -->
+
+  </div>
   <!-- 底部 -->
   <div class="mmm_footer">
     <ul class="clearfix">
@@ -104,7 +104,14 @@
   </script>
   <script type="text/html" id="evaluate">
     {{ each result v i }}
-    <div class="items">
+       <div class="wraper">
+        <div class="titleImg">
+          <div class="wrapimg">
+            {{@ v.productImg }}
+          </div>
+         <p>{{v.productName}}</p>
+       </div>
+       <div class="items">
           <div class="items-title clearfix">
             <div class="fl">
               {{v.comName}}
@@ -115,7 +122,8 @@
             </div>
           </div>
           <p>{{v.comContent}}</p>
-        </div>
+      </div>
+       </div>
     {{ /each }}
     </script>
   <script src="lib/jquery/jquery.min.js"></script>

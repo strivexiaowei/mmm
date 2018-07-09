@@ -1,0 +1,190 @@
+@import 'common';
+//导航区
+@color : rgb(255, 88, 37);
+.category {
+  padding-bottom: .666667rem /* 50/75 */ ;
+  .category_title {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    border-radius: 7px;
+    >li {
+      border-bottom: 1px solid #ccc;
+      >a {
+        font-size: .466667rem /* 35/75 */;
+        padding: .266667rem .4rem /* 30/75 */;
+        background: url(http://www.zuyushop.com/wap/images/arrow1.gif) no-repeat right 40% /* 10/75 */;
+        font-weight: 700;
+      }
+    }
+    >li:last-of-type {
+      border-color: transparent;
+    }
+  }
+}
+
+.hd {
+  h3 {
+    padding-left: .266667rem /* 20/75 */;
+    height: 1.04rem /* 78/75 */;
+    line-height: 1.04rem /* 78/75 */;
+    border-top: 1px solid @color;
+    border-bottom: 1px solid @color;
+    color: @color;
+    background-color: #f1f1f1;
+  }
+}
+.brand {
+  a {
+    border-bottom: 1px solid #ccc;
+    padding: .266667rem /* 20/75 */;
+    em {
+      display: block;
+      width: .56rem /* 42/75 */;
+      height: .56rem /* 42/75 */;
+      background-color: #bbb;
+      text-align: center;
+      line-height: .56rem /* 42/75 */;
+      color: #fff;
+    }
+    em.top1 {
+      background-color: red;
+    }
+    em.top2 {
+      background-color: orange;
+    }
+    em.top3 {
+      background-color: limegreen;
+    }
+    .desc {
+      overflow: hidden;
+      padding-left: .266667rem /* 20/75 */;
+      h4 {
+        font-size: .4rem /* 30/75 */;
+      }
+      p {
+        font-size: .346667rem /* 26/75 */;
+        color: #999;
+      }
+      span {
+        font-size: .506667rem /* 38/75 */;
+        color: #999;
+      }
+    }
+  }
+}
+
+.mmp_product {
+  li {
+    border-bottom: 1px solid #ccc;
+    a {
+      padding: .266667rem /* 20/75 */;
+      background-color: #fff;
+      img {
+        width: 2.666667rem /* 200/75 */;
+        height: 2.613333rem /* 196/75 */;
+      }
+    }
+    .title {
+      overflow: hidden;
+      font-size: .346667rem /* 26/75 */;
+      padding-left: .266667rem /* 20/75 */;
+      position: relative;
+      p {
+        line-height: .613333rem /* 46/75 */;
+      }
+      .tit {
+        height: 1.2rem /* 90/75 */;
+      }
+      .price {
+        color: red;
+      }
+      .desc {
+        font-size: .32rem /* 24/75 */;
+        color: #999;
+      }
+    }
+    
+  }
+}
+.wuxing {
+  position: absolute;
+  right: 0;
+  bottom: .146667rem /* 11/75 */;
+  color: gold;
+}
+
+// 网友评论
+.pinglun {
+  background-color: #fff;
+  h4 {
+    font-size: .4rem /* 30/75 */;
+    line-height: 2;
+    text-align: center;
+    background-color: #dbdbdb;
+    font-weight: 400;
+  }
+
+  li {
+    padding: .266667rem /* 20/75 */;
+    .box {
+      margin-bottom: .4rem /* 30/75 */;
+      background-color: #fff;
+      img {
+        width: 2.666667rem /* 200/75 */;
+        height: 2.666667rem /* 200/75 */;
+      }
+      p{ 
+        overflow: hidden;
+        padding-left: .266667rem /* 20/75 */;
+        font-size: .32rem /* 24/75 */;
+        line-height: 1.5;
+      }
+    }
+    a {
+      padding: .266667rem /* 20/75 */;
+      border: 1px solid #ccc;
+      background-color: #eee;
+      position: relative;
+    }
+    a::after, 
+    a::before {
+      content: '';
+      position: absolute;
+      // width: 10px;
+      border:  solid transparent;
+      height: 0;
+      width: 0; 
+    }
+    a::before {
+      border-width: .226667rem /* 17/75 */;
+      border-bottom-color: #ccc;
+      left: .666667rem /* 50/75 */;
+      top: -.453333rem /* 34/75 */;
+    }
+    a::after {
+      border-width: .213333rem /* 16/75 */;
+      border-bottom-color: #eee;
+      left: .68rem /* 51/75 */;
+      top: -.413333rem /* 31/75 */
+    }
+    .title {
+      font-size: .266667rem /* 20/75 */;
+      color: #747474;
+      margin-bottom: .133333rem /* 10/75 */;
+      .p_b {
+        font-size: .32rem /* 24/75 */;
+      }
+      .fl {
+        position: relative;
+        span {
+          top: 0;
+          left: 120%;
+        }
+      }
+    }
+    p {
+      font-size: .346667rem /* 26/75 */;
+      line-height: .586667rem /* 44/75 */;
+    }
+  }
+}

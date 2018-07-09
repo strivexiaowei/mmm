@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>商品详情</title>
+  <link rel="stylesheet" href="css/bijia.css">
+  <link rel="stylesheet" href="fonts/iconfont.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- 头部 -->
+    <header id="top" class="mmp_header clearfix">
+      <a href="javascript: history.go(-1)" class="fl">
+        <img src="images/header_logo.png" alt="">
+      </a>
+      <div class="fr">
+        <img src="images/header_app.png" alt="">
+      </div>
+    </header>
+
+    <!-- 搜索框 -->
+    <div class="mmp_search clearfix">
+      <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+      <button>搜索</button>
+      <ul class="result">
+        <!-- 搜索坑 -->
+      </ul>
+    </div>
+
+    <!-- 中间内容区 -->
+    <!-- 面包屑导航 -->
+    <div class="mmp_nav clearfix">
+      <ul class="crumbs fl clearfix">
+        <li>
+          <a href="index.html">首页 ></a>
+        </li>
+        <li>
+          <a href="category.html" class="pz">
+            <span>电视</span> ></a>
+        </li>
+        <li class="now">
+          <a class="categoryTxt" href="">
+            <span>电视</span> ></a>
+        </li>
+      </ul>
+      <button class="btn fr">筛选</button>
+    </div>
+
+    <!-- 商品头部 -->
+    <div class="mmp_product_t">
+      <div class="product_t">
+        <!-- 1号坑 -->
+      </div>
+      <ul class="product_c clearfix">
+        <li>
+          <a href="javascript:;">比价购买</a>
+        </li>
+        <li>
+          <a href="javascript:;">产品参数</a>
+        </li>
+        <li>
+          <a href="javascript:;">评论（32423）</a>
+        </li>
+      </ul>
+      <div class="product_b clearfix">
+        <!-- 2号坑 -->
+        <div class="fl">
+          <img src="images/slogo.png" alt=""> 京东商品 </div>
+        <div class="fr">
+          <span>￥1999.99</span>
+          <button>去购买</button>
+        </div>
+      </div>
+      <div class="product_f">
+        <p>*实际价格以当前网页列出的售价为准，我们提供的价格可能有数小时或数日的延迟。</p>
+      </div>
+    </div>
+    <!-- 网友评论 -->
+    <div class="pinglun">
+      <h4>网友评价</h4>
+      <ul>
+        <li data-id="">
+          <a href="javascript:;">
+            <div class="title clearfix">
+              <div class="fl">
+                z**:
+              </div>
+              <div class="fr">
+                <div class="p_t">2018-6-28</div>
+                <div class="p_b">购买自:京东商城</div>
+              </div>
+            </div>
+            <p>听说好评必须85字？不然没有积分？那么问题来了，怎么样才可以达到85字呢？这个问题在我的脑海里久久不去。马云爸爸怎么可以这样欺负我？不给我买冰阔洛也就算了，还让我一个二年级的小学生评论一定要写85字，哼！好过分啊，一定要记在小本本上！￣へ￣</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 尾部 -->
+    <footer class="footer">
+      <div class="pinpai clearfix">
+        <span class="fl">品牌排行</span>
+        <img class="fr" src="images/more.png" alt="">
+      </div>
+
+      <ul class="f_tips clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li>
+          <a href="#top">
+            <img src="images/top.jpg" alt=""> 返回顶部
+          </a>
+        </li>
+      </ul>
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        慢慢买手机版
+        <span> -- 掌上比价平台</span>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </footer>
+  </div>
+
+  <!-- 模板一 -->
+  <script type="text/html" id="tpl">
+    {{each result v i}}
+    <h4 class="text-rows-2">{{v.productName}}</h4>
+    {{@v.productImg}} {{/each}}
+  </script>
+
+  <!-- 模板二 -->
+  <script type="text/html" id="tpl2">
+    {{each result v i}} {{@v.bjShop}} {{ /each }}
+  </script>
+
+  <!-- 模板三 -->
+  <script type="text/html" id="tpl4">
+    {{each result v i}}
+    <li data-id="{{v.comId}}">
+      <div class="title clearfix">
+        <div class="fl">
+          {{v.comName}}
+        </div>
+        <div class="fr">
+          <div class="p_t">{{v.comTime}}</div>
+          <div class="p_b">购买自:{{v.comFrom}}</div>
+        </div>
+      </div>
+      <p>{{v.comContent}}</p>
+    </li>
+    {{/each}}
+  </script>
+
+  <script type="text/html" id="tpl3">
+    {{each result v i}}
+    <li>
+      <a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1">{{v.category}}</a>
+    </li>
+    {{/each}}
+  </script>
+
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/bijia.js"></script>
+
+  <script>
+    // $(this).next
+  </script>
+</body>
+
+</html>

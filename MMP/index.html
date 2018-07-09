@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="fonts/iconfont.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header id="top" class="mmp_header clearfix">
+      <a href="index.html" class="fl">
+        <img src="images/header_logo.png" alt="">
+      </a>
+      <div class="fr">
+        <img src="images/header_app.png" alt="">
+      </div>
+    </header>
+
+    <!-- 搜索框 -->
+    <div class="mmp_search clearfix">
+      <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+      <button>搜索</button>
+      <ul class="result">
+        <!-- 搜索坑 -->
+      </ul>
+    </div>
+
+    <!-- 导航区 -->
+    <ul class="mmp_nav clearfix">
+      <!-- 1号坑 -->
+    </ul>
+
+    <!-- 推荐 -->
+    <div class="mmp_recommended">
+      <header class="rm clearfix">
+        <span class="fl">超值推荐</span>
+        <img class="fr" src="images/more.png" alt="">
+      </header>
+
+      <ul>
+        <!-- 2号坑 -->
+      </ul>
+
+      <a class="load_more" href="moneyctrl.html?pageid=0">更多优惠信息 »</a>
+
+    </div>
+
+    <!-- 尾部 -->
+    <footer class="footer">
+      <div class="pinpai clearfix">
+        <span class="fl">品牌排行</span>
+        <img class="fr" src="images/more.png" alt="">
+      </div>
+
+      <ul class="f_tips clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li>
+          <a href="#top">
+            <img src="images/top.jpg" alt=""> 返回顶部
+          </a>
+        </li>
+      </ul>
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        慢慢买手机版
+        <span> -- 掌上比价平台</span>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </footer>
+  </div>
+
+  <!-- 模板一 -->
+  <script type="text/html" id="tpl">
+    {{each result v i}}
+    <li data-id="{{v.indexmenuId}}">
+      <a href="{{v.titlehref}}">
+        {{@v.img}}
+        <p>{{v.name}}</p>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+
+  <!-- 模板二 -->
+  <script type="text/html" id="tpl2">
+    {{ each result v i }}
+    <li data-id="{{v.productId}}">
+      <a class="clearfix" href="moneyproduct.html?productid={{v.productId}}">
+        <div class="fl">
+          {{@v.productImgSm}}
+        </div>
+        <div class="desc">
+          <p class="title">{{v.productName}}
+            <span>{{v.productPinkage}}</span>
+          </p>
+          <p class="other">
+            <span>{{v.productFrom}} | 10-25 14:10</span>
+            <span class="fr">
+              <i class="iconfont icon-pinglun"></i> {{(v.productComCount.replace('人评论','')).slice(1)}}</span>
+          </p>
+        </div>
+      </a>
+    </li>
+    {{ /each }}
+  </script>
+
+  <script type="text/html" id="tpl3">
+    {{each result v i}}
+    <li>
+      <% if (v.categoryId == '2b') { %>
+        <a href="b2.html">{{v.category}}</a>
+      <% } else {%>
+        <a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1">{{v.category}}</a>
+      <% }%>
+    </li>
+    {{/each}}
+  </script>
+
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

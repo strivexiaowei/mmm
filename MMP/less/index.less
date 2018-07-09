@@ -1,0 +1,90 @@
+@import 'common';
+//导航区
+.mmp_nav{
+  background-color: #fff;
+  padding-top: .666667rem /* 50/75 */;
+  padding-bottom: .266667rem /* 20/75 */;
+  margin-bottom: .133333rem /* 10/75 */;
+  li {
+    float: left;
+    width: 25%;
+    font-size: .346667rem /* 26/75 */;
+    text-align: center;
+    img {
+      width: 1.333333rem /* 100/75 */;
+      height: 1.333333rem /* 100/75 */;
+      margin: 0 auto;
+    }
+    p {
+      margin: .16rem 0 /* 12/75 */
+    }
+    a {
+      display: block;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  }
+}
+// 商品推荐
+.mmp_recommended {
+  margin-bottom: .266667rem /* 20/75 */;
+  .rm {
+    padding: .266667rem ;
+    background-color: @baseColor;
+    font-size: .48rem /* 36/75 */;
+    color: #fff;
+    img {
+      width: .56rem /* 42/75 */;
+      height: .56rem /* 42/75 */;
+    }
+  }
+
+  ul {
+    li{
+      border-bottom: 1px solid #ccc;
+      a {
+        background-color: #fff;
+        padding: .266667rem /* 20/75 */;
+        img {
+          width: 2.666667rem /* 200/75 */;
+          height: 2.666667rem /* 200/75 */;
+        }
+        .desc {
+          overflow: hidden;
+          font-size: .373333rem /* 28/75 */;
+          height:  2.266667rem /* 170/75 */;
+          position: relative;
+          padding-top: .133333rem /* 10/75 */;
+          padding-left: .266667rem /* 20/75 */;
+        }
+        .other {
+          color: #999;
+          width: 90%;
+          position: absolute;
+          bottom: 0;
+          font-size: .32rem /* 24/75 */;
+        }
+        .iconfont {
+          font-size: .346667rem /* 26/75 */;
+        }
+      }
+    }
+    .title span {
+      color: red;
+    }
+  }
+  .load_more {
+    line-height: .866667rem /* 65/75 */;
+    background: #F4F4F4;
+    text-decoration: none;
+    font-size: .373333rem /* 28/75 */;
+    background-image: linear-gradient(#ffffff, #f4f4f4);
+    -moz-background-clip: padding;
+    margin: .133333rem /* 10/75 */;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  
+
+}

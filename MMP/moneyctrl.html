@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>省钱控</title>
+  <link rel="stylesheet" href="css/moneyctrl.css">
+  <link rel="stylesheet" href="fonts/iconfont.css">
+</head>
+
+<body>
+
+  <h3 class="container">
+    <!-- 头部 -->
+    <header id="top" class="mmp_header clearfix">
+        <a href="javascript: history.go(-1)" class="fl">
+        <span class="iconfont icon-fanhui"></span>
+      </a>
+      <div class="fr">
+        <img src="images/header_app.png" alt="">
+      </div>
+      <h3>
+        省钱控-最新优惠
+      </h3>
+    </header>
+
+    <!-- 中间部分 -->
+    <div class="mmp_recommended">
+      <ul>
+        <!-- 2号坑 -->
+      </ul>
+    </div>
+
+
+    <!-- 页码 -->
+    <div class="clearfix page">
+      <span>
+        <a href="javascript:;">上一页</a>
+      </span>
+      <span>
+        <select name="select" id="selectPage">
+          <!-- <option value="1">1/3</option>
+          <option value="2">2/3</option>
+          <option value="3">3/3</option> -->
+        </select>
+      </span>
+      <span>
+        <a href="javascript:;">下一页</a>
+      </span>
+    </div>
+
+    <!-- 尾部 -->
+    <footer class="footer">
+      <div class="pinpai clearfix">
+        <span class="fl">品牌排行</span>
+        <img class="fr" src="images/more.png" alt="">
+      </div>
+
+      <ul class="f_tips clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li>
+          <a href="#top">
+            <img src="images/top.jpg" alt=""> 返回顶部
+          </a>
+        </li>
+      </ul>
+      <p>
+        <a href="javascript:;">手机APP下载</a>
+        慢慢买手机版
+        <span> -- 掌上比价平台</span>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </footer>
+  </div>
+
+  <!-- 模板一 -->
+  <script type="text/html" id="tpl">
+    {{ each result v i }}
+    <li data-id="{{v.productId}}">
+      <a class="clearfix" href="javascript:;">
+        <div class="fl">
+          {{@v.productImgSm}}
+        </div>
+        <div class="desc">
+          <p class="title">{{v.productName}}
+            <span>{{v.productPinkage}}</span>
+          </p>
+          <p class="other">
+            <span>{{v.productFrom}} | 10-25 14:10</span>
+            <span class="fr">
+              <i class="iconfont icon-pinglun"></i> {{(v.productComCount.replace('人评论','')).slice(1)}}
+            </span>
+          </p>
+        </div>
+      </a>
+    </li>
+    {{ /each }}
+  </script>
+
+  <!-- 模板二 -->
+  <script type="text/html" id="tpl2">
+
+  </script>
+
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common.js"></script>
+
+  <script src="js/moneyctrl.js"></script>
+
+  <script>
+    // $(this).next
+  </script>
+</body>
+
+</html>

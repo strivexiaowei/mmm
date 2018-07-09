@@ -370,15 +370,14 @@ img {
   overflow: hidden;
 }
 .gspronav {
-  position: relative;
   height: 1.5rem;
   line-height: 1.5rem;
+  position: relative;
   border-bottom: 1px solid #ccc;
 }
 .gspronav .left-nav {
   margin-right: 1.5rem;
   height: 100%;
-  position: relative;
   border-right: 1px solid #ccc;
   z-index: 555;
 }
@@ -397,6 +396,7 @@ img {
   width: 100%;
   text-align: left;
   background-color: #fff;
+  z-index: 999;
 }
 .gspronav .left-nav a .sublist p {
   position: relative;
